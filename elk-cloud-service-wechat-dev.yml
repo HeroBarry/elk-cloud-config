@@ -1,3 +1,6 @@
+server:
+  port: 8112
+
 spring:
   http:
     encoding:

@@ -1,3 +1,6 @@
+server:
+  port: 8104
+
 spring:
   http:
     encoding:

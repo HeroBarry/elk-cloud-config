@@ -1,14 +1,11 @@
-spring:
-  http:
-    encoding:
-      force: true
-      charset: UTF-8
-      enabled: true
 server:
-  tomcat:
-    uri-encoding: UTF-8
+  port: 8100
 
-#logging:
-#  level:
-#    org:
-#      springframework: DEBUG
+elk:
+  auth:
+    clientId: ENC(Ho5VxMWMMIzfIEE8/WxVzA==)
+    clientSecret: ENC(Ho5VxMWMMIzfIEE8/WxVzA==)
+    scope: server
+
+logging:
+  config: classpath:logback.xml

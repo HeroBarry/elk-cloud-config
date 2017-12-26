@@ -1,3 +1,6 @@
+server:
+  port: 8110
+
 spring:
   http:
     encoding:
