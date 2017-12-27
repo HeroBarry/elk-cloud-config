@@ -15,10 +15,11 @@ spring:
     username: admin
     password: elk123
 
-
+mybatis:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
 #mybaits-plus配置，修改主键类型，mapper.xml、type 别名等
-mybatis-plus:
-  mapper-locations: classpath:/mapper/*Mapper.xml
+#mybatis-plus:
+#  mapper-locations: classpath:/mapper/*Mapper.xml
 #  typeAliasesPackage: com.elk.cloud.upms.entity
 #  global-config:
 #    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
@@ -29,8 +30,8 @@ mybatis-plus:
 #    db-column-underline: true
 #    #刷新mapper 调试神器
 #    refresh-mapper: true
-    #数据库大写下划线转换
-    #capital-mode: true
+#    #数据库大写下划线转换
+#    #capital-mode: true
 #  configuration:
 #    map-underscore-to-camel-case: true
 #    cache-enabled: true
