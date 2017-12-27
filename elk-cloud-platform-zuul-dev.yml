@@ -1,7 +1,6 @@
 server:
   port: 8003
 
-
 spring:
   rabbitmq:
     host: localhost
@@ -25,12 +24,12 @@ zuul:
   routes:
     elk-auth-service:
       path: /auth/**
-      serviceId: elk-auth-service
+      serviceId: elk-cloud-service-auth
       stripPrefix: true
       sensitiveHeaders:
-    elk-upms-service:
+    elk-cloud-service-upms:
       path: /upms/**
-      serviceId: elk-upms-service
+      serviceId: elk-cloud-service-upms
       stripPrefix: true
       sensitiveHeaders:
   ratelimit:
