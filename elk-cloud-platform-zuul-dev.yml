@@ -23,16 +23,16 @@ zuul:
     connect-timeout-millis: 30000
     socket-timeout-millis: 30000
   routes:
-#    auth-service:
-#      path: /auth/**
-#      serviceId: pig-auth-service
-#      stripPrefix: true
-#      sensitiveHeaders:
-#    pig-admin-service:
-#      path: /admin/**
-#      serviceId: pig-admin-service
-#      stripPrefix: true
-#      sensitiveHeaders:
+    elk-auth-service:
+      path: /auth/**
+      serviceId: elk-auth-service
+      stripPrefix: true
+      sensitiveHeaders:
+    elk-upms-service:
+      path: /upms/**
+      serviceId: elk-upms-service
+      stripPrefix: true
+      sensitiveHeaders:
   ratelimit:
     key-prefix: elk-ratelimite
     enabled: true
