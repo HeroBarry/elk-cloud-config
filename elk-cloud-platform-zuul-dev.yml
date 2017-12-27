@@ -15,7 +15,7 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 30000
-
+#
 zuul:
   ignoredServices: '*'
   host:
