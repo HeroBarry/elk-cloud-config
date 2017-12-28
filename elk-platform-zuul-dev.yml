@@ -22,12 +22,12 @@ zuul:
     connect-timeout-millis: 30000
     socket-timeout-millis: 30000
   routes:
-    elk-auth-service:
+    elk-service-auth:
       path: /auth/**
       serviceId: elk-service-auth
       stripPrefix: true
       sensitiveHeaders:
-    elk-upms-service:
+    elk-service-upms:
       path: /upms/**
       serviceId: elk-service-upms
       stripPrefix: true
