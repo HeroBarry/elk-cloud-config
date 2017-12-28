@@ -24,12 +24,12 @@ zuul:
   routes:
     elk-auth-service:
       path: /auth/**
-      serviceId: elk-auth-service
+      serviceId: elk-service-auth
       stripPrefix: true
       sensitiveHeaders:
     elk-upms-service:
       path: /upms/**
-      serviceId: elk-upms-service
+      serviceId: elk-service-upms
       stripPrefix: true
       sensitiveHeaders:
   ratelimit:
@@ -52,13 +52,9 @@ security:
   oauth2:
     resource:
       loadBalanced: true
-      user-info-uri: http://elk-auth-service/user
+      user-info-uri: http://elk-service-auth/user
       prefer-token-info: false
-      service-id: elk-zuul
-#加密参数
-#jasypt:
-#  encryptor:
-#    password: lengleng
+      service-id: elk-platform-zuul
 
 filter:
   urls:
