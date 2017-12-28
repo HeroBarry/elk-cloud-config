@@ -1,20 +1,24 @@
+server:
+  port: 8108
+
+# Redis cache 过期时间设置
 redis:
   cache:
     expiration: 3600
 
-
+# datasoure默认使用JDBC
 spring:
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: ENC(FZ1r4rlIZ+Vdz2ErY26Cow==)
-    password: ENC(r6lx8xL5l+9DWmuMa8t7FA==)
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://127.0.0.1:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
     username: ENC(jpgiWRdWgGK+VS5g6m9AgQ==)
     password: ENC(jpgiWRdWgGK+VS5g6m9AgQ==)
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: ENC(FZ1r4rlIZ+Vdz2ErY26Cow==)
+    password: ENC(r6lx8xL5l+9DWmuMa8t7FA==)
 
 
 
@@ -41,7 +45,7 @@ mybatis:
 
 qiniu:
   accessKey: hM2cBDEM0FTYzpXbigRW90kV12NhhzhFM3jCzurJ
-  secretKey: ENC(jpgiWRdWgGK+VS5g6m9AgQ==)
+  secretKey: ENC(HM/K0KmtFoZSBhGDEA0Ez71ePTncZlQ954DfLNMZuOftKZq+2WR+dCXH9QEsf768q9wwd92RXLE=)
   bucket: pigcloud
   host: http://p0hpm86wj.bkt.clouddn.com/
 
