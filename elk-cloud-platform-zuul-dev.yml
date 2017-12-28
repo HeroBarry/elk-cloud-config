@@ -15,7 +15,7 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 30000
-#
+
 zuul:
   ignoredServices: '*'
   host:
@@ -24,12 +24,12 @@ zuul:
   routes:
     elk-auth-service:
       path: /auth/**
-      serviceId: elk-cloud-service-auth
+      serviceId: elk-auth-service
       stripPrefix: true
       sensitiveHeaders:
-    elk-cloud-service-upms:
+    elk-upms-service:
       path: /upms/**
-      serviceId: elk-cloud-service-upms
+      serviceId: elk-upms-service
       stripPrefix: true
       sensitiveHeaders:
   ratelimit:
