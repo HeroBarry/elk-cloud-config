@@ -3,10 +3,10 @@ server:
 
 spring:
   rabbitmq:
-    host: localhost
+    host: 127.0.0.1
     port: 5672
-    username: admin
-    password: elk123
+    username: ENC(FZ1r4rlIZ+Vdz2ErY26Cow==)
+    password: ENC(r6lx8xL5l+9DWmuMa8t7FA==)
   boot:
     admin:
       turbine:

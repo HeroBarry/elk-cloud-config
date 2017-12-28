@@ -1,13 +1,13 @@
 #加密配置
-#jasypt:
-#  encryptor:
-#    password: lengleng
+jasypt:
+  encryptor:
+    password: elk123
 
 spring:
   redis:
-    host: localhost
+    host: 127.0.0.1
     port: 6379
-    password: elk123
+    password: ENC(r6lx8xL5l+9DWmuMa8t7FA==)
   http:
     multipart:
       max-file-size: 1000MB

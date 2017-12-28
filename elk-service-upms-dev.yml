@@ -7,14 +7,14 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
-    username: admin
-    password: elk123
+    username: ENC(FZ1r4rlIZ+Vdz2ErY26Cow==)
+    password: ENC(r6lx8xL5l+9DWmuMa8t7FA==)
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
-    username: root
-    password: root
+    username: ENC(jpgiWRdWgGK+VS5g6m9AgQ==)
+    password: ENC(jpgiWRdWgGK+VS5g6m9AgQ==)
 
 
 
@@ -41,7 +41,7 @@ mybatis:
 
 qiniu:
   accessKey: hM2cBDEM0FTYzpXbigRW90kV12NhhzhFM3jCzurJ
-  secretKey: ENC(HM/K0KmtFoZSBhGDEA0Ez71ePTncZlQ954DfLNMZuOftKZq+2WR+dCXH9QEsf768q9wwd92RXLE=)
+  secretKey: ENC(jpgiWRdWgGK+VS5g6m9AgQ==)
   bucket: pigcloud
   host: http://p0hpm86wj.bkt.clouddn.com/
 
