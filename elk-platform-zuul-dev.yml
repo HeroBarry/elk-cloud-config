@@ -33,15 +33,15 @@ zuul:
       stripPrefix: true
       sensitiveHeaders:
   ratelimit:
-    key-prefix: elk-ratelimite
+    key-prefix: elk-ratelimite #对应用来标识请求的key的前缀
     enabled: true
-    repository: REDIS
-    behind-proxy: true
+    repository: REDIS #对应存储类型（用来存储统计信息）
+    behind-proxy: true #代理之后
     policies:
-      pig-admin-service:
-        limit: 100
-        quota: 1
-        refresh-interval: 3
+      elk-upms-service: #特定的路由
+        limit: 100 #可选 - 每个刷新时间窗口对应的请求数量限制
+        quota: 100 #可选-  每个刷新时间窗口对应的请求时间限制（秒）
+        refresh-interval: 3 # 刷新时间窗口的时间，默认值 (秒
 
 security:
   #login:
