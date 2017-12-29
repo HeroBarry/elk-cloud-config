@@ -7,7 +7,7 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
-    password: ENC(r6lx8xL5l+9DWmuMa8t7FA==)
+    password: elk123
   http:
     multipart:
       max-file-size: 1000MB
