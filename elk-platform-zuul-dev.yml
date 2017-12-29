@@ -64,6 +64,7 @@ filter:
     anon:
       - /auth/**
       - /upms/code/*
+      - /test/**
 
 logging:
   config: classpath:logback.xml
