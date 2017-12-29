@@ -26,12 +26,12 @@ zuul:
       path: /auth/**
       serviceId: elk-service-auth
       stripPrefix: true
-      #sensitiveHeaders:
+      sensitiveHeaders:
     elk-service-upms:
       path: /upms/**
       serviceId: elk-service-upms
       stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      #sensitiveHeaders:
+      sensitiveHeaders:
   ratelimit:
     key-prefix: elk-ratelimite #对应用来标识请求的key的前缀
     enabled: true
@@ -44,8 +44,6 @@ zuul:
         refresh-interval: 3 # 刷新时间窗口的时间，默认值 (秒
 
 security:
-  #login:
-    #url: /auth/oauth/token
   validate:
       code: true
   sessions: stateless
