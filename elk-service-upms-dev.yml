@@ -10,8 +10,8 @@ redis:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    username: ENC(jpgiWRdWgGK+VS5g6m9AgQ==)
-    password: ENC(jpgiWRdWgGK+VS5g6m9AgQ==)
+    username: root
+    password: root
     url: jdbc:mysql://127.0.0.1:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
   rabbitmq:
     host: 127.0.0.1
