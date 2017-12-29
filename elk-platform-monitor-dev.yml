@@ -5,8 +5,8 @@ spring:
   rabbitmq:
     host: 127.0.0.1
     port: 5672
-    username: ENC(FZ1r4rlIZ+Vdz2ErY26Cow==)
-    password: ENC(r6lx8xL5l+9DWmuMa8t7FA==)
+    username: admin
+    password: elk123
   boot:
     admin:
       turbine:

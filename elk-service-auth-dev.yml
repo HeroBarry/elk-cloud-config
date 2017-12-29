@@ -3,8 +3,8 @@ server:
 
 elk:
   auth:
-    clientId: ENC(FveU2jbXu4Y2g1nQhqWMOg==)
-    clientSecret: ENC(FveU2jbXu4Y2g1nQhqWMOg==)
+    clientId: pig
+    clientSecret: pig
     scope: server
 
 logging:
