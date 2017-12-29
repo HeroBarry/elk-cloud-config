@@ -63,7 +63,7 @@ filter:
   urls:
     anon:
       - /auth/**
-      - /admin/code/*
+      - /upms/code/*
 
 logging:
   config: classpath:logback.xml
