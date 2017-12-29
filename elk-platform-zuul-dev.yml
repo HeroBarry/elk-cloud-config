@@ -22,9 +22,6 @@ zuul:
     connect-timeout-millis: 30000  #连接超时（豪秒）
     socket-timeout-millis: 30000
   routes:
-    api:
-       path: /test/**
-       url: https://www.baidu.com/
     elk-service-auth:
       path: /auth/**
       serviceId: elk-service-auth
@@ -50,7 +47,7 @@ security:
   #login:
     #url: /auth/oauth/token
   validate:
-      code: false
+      code: true
   sessions: stateless
   oauth2:
     resource:
