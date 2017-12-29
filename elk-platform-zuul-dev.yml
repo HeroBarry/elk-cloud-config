@@ -24,7 +24,7 @@ zuul:
   routes:
     api:
        path: /test/**
-       url: www.baidu.com
+       url: https://www.baidu.com/
     elk-service-auth:
       path: /auth/**
       serviceId: elk-service-auth
