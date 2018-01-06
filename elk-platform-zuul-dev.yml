@@ -60,12 +60,12 @@ zuul:
 
 security:
   validate:
-    code: true
+    code: false
   sessions: stateless
   oauth2:
     resource:
       loadBalanced: true
-      user-info-uri: http://elk-service-auth/user
+      user-info-uri: http://elk-platform-auth/user
       prefer-token-info: false
       service-id: elk-platform-zuul
 
