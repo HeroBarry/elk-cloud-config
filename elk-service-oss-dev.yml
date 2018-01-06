@@ -3,6 +3,7 @@ server:
 
 # Redis cache 过期时间设置
 redis:
+  open: false  # 是否开启redis缓存  true开启   false关闭
   cache:
     expiration: 3600
 
