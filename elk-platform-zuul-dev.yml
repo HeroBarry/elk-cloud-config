@@ -55,7 +55,7 @@ zuul:
 
 security:
   validate:
-      code: true
+    code: true
   sessions: stateless
   oauth2:
     resource:
