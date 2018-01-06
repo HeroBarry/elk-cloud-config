@@ -22,9 +22,9 @@ zuul:
     connect-timeout-millis: 30000  #连接超时（豪秒）
     socket-timeout-millis: 30000
   routes:
-    elk-platform-auth:
+    elk-service-auth:
       path: /auth/**
-      serviceId: elk-platform-auth
+      serviceId: elk-service-auth
       stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
       sensitiveHeaders:
     elk-service-upms:
