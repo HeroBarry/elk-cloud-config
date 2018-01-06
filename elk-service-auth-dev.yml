@@ -7,5 +7,24 @@ elk:
     clientSecret: pig
     scope: server
 
-logging:
-  config: classpath:logback.xml
+  # datasoure默认使用JDBC
+spring:
+    datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+      url: jdbc:mysql://127.0.0.1:3306/elk_cloud_oss?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    rabbitmq:
+      host: 127.0.0.1
+      port: 5672
+      username: admin
+      password: elk123
+
+  # Mybatis配置
+  mybatis:
+    mapperLocations: classpath:/mapper/**/*.xml
+    configLocation: classpath:mybatis.xml
+
+  logging:
+    config: classpath:logback.xml
