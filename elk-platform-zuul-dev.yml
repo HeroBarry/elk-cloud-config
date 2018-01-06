@@ -25,7 +25,7 @@ zuul:
     elk-service-auth:
       path: /auth/**
       serviceId: elk-service-auth
-      stripPrefix: true
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
       sensitiveHeaders:
     elk-service-upms:
       path: /upms/**
@@ -40,6 +40,11 @@ zuul:
     elk-service-quartz:
       path: /quartz/**
       serviceId: elk-service-quartz
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-oss:
+      path: /oss/**
+      serviceId: elk-service-oss
       stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
       sensitiveHeaders:
   ratelimit:
