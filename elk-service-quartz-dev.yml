@@ -12,7 +12,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
-    url: jdbc:mysql://127.0.0.1:3306/elk_cloud_quartz?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://127.0.0.1:3306/elk_cloud_quartz?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
   rabbitmq:
     host: 127.0.0.1
     port: 5672
@@ -22,7 +22,7 @@ spring:
 # Mybatis配置
 mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
-  configLocation: classpath:mybatis.xml
+ # configLocation: classpath:mybatis.xml
 
 logging:
   config: classpath:logback.xml
