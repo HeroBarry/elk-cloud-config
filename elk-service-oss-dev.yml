@@ -16,14 +16,11 @@ spring:
     password: root
     url: jdbc:mysql://127.0.0.1:3306/elk_cloud_oss?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
   rabbitmq:
-    host: 127.0.0.1
+    host: 49.4.21.180
     port: 5672
     username: admin
     password: elk123
-http:
-   multipart:
-    max-file-size:200MB
-    max-request-size:1024MB
+
 # Mybatis配置
 mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
