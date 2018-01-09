@@ -3,7 +3,7 @@ server:
 
 spring:
   rabbitmq:
-    host: 127.0.0.1
+    host: 49.4.21.180
     port: 5672
     username: admin
     password: elk123
@@ -22,14 +22,29 @@ zuul:
     connect-timeout-millis: 30000  #连接超时（豪秒）
     socket-timeout-millis: 30000
   routes:
-    elk-service-auth:
+    elk-platform-auth:
       path: /auth/**
-      serviceId: elk-service-auth
-      stripPrefix: true
+      serviceId: elk-platform-auth
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
       sensitiveHeaders:
     elk-service-upms:
       path: /upms/**
       serviceId: elk-service-upms
+      stripPrefix: true   # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-basis:
+      path: /basis/**
+      serviceId: elk-service-basis
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-quartz:
+      path: /quartz/**
+      serviceId: elk-service-quartz
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-oss:
+      path: /oss/**
+      serviceId: elk-service-oss
       stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
       sensitiveHeaders:
   ratelimit:
@@ -45,12 +60,12 @@ zuul:
 
 security:
   validate:
-      code: true
+    code: false
   sessions: stateless
   oauth2:
     resource:
       loadBalanced: true
-      user-info-uri: http://elk-service-auth/user
+      user-info-uri: http://elk-platform-auth/user
       prefer-token-info: false
       service-id: elk-platform-zuul
 
