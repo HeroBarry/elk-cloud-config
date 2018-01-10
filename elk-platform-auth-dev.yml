@@ -3,16 +3,16 @@ server:
 
 elk:
   auth:
-    clientId: ENC(ZgaU7KAHGDp0Jzs5TeVxkg==)
-    clientSecret: ENC(ZgaU7KAHGDp0Jzs5TeVxkg==)
+    clientId: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
+    clientSecret: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
     scope: server
 
 spring:
   rabbitmq:
     host: 49.4.21.180
     port: 5672
-    username: ENC(Xti+b7Djk0w6BIEzqY3Hiw==)
-    password: ENC(ZgaU7KAHGDp0Jzs5TeVxkg==)
+    username: ENC(1Ehmph15o5VJIayVr90nKQ==)
+    password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
 
 logging:
     config: classpath:logback.xml
