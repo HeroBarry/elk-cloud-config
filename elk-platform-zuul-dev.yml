@@ -47,6 +47,11 @@ zuul:
       serviceId: elk-service-oss
       stripPrefix: false # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
       sensitiveHeaders:
+    elk-service-activiti:
+      path: /activiti/**
+      serviceId: elk-service-activiti
+      stripPrefix: false # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
   ratelimit:
     key-prefix: elk-ratelimite #对应用来标识请求的key的前缀
     enabled: true
@@ -78,5 +83,6 @@ filter:
       - /webjars/**
       - /oss/**
       - /upms/**
+      - /activiti/**
 logging:
   config: classpath:logback.xml
