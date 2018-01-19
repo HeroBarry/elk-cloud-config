@@ -12,7 +12,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: ENC(i3W5sWIP+RQt4tt/dk/Qiw==)
     password: ENC(i3W5sWIP+RQt4tt/dk/Qiw==)
-    url: jdbc:mysql://49.4.21.180:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://127.0.0.1:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
   rabbitmq:
     host: 49.4.21.180
     port: 5672
