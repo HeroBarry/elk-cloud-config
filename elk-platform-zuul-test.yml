@@ -86,6 +86,8 @@ filter:
       - /upms/code/*
       - /*/v2/api-docs
       - /webjars/**
-
+      - /oss/**
+      - /upms/**
+      - /activiti/**
 logging:
   config: classpath:logback.xml
