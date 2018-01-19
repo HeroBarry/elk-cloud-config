@@ -1,0 +1,93 @@
+server:
+  port: 8003
+
+spring:
+  rabbitmq:
+    host: 49.4.21.180
+    port: 5672
+    username: ENC(1Ehmph15o5VJIayVr90nKQ==)
+    password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+
+zuul:
+  ignoredServices: '*' #忽略服务  *代表所有的服务都会被忽略
+  host:
+    connect-timeout-millis: 30000  #连接超时（豪秒）
+    socket-timeout-millis: 30000
+  routes:
+    elk-platform-auth:
+      path: /auth/**
+      serviceId: elk-platform-auth
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-upms:
+      path: /upms/**
+      serviceId: elk-service-upms
+      stripPrefix: true   # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-basis:
+      path: /basis/**
+      serviceId: elk-service-basis
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-quartz:
+      path: /quartz/**
+      serviceId: elk-service-quartz
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-vehicle:
+      path: /vehicle/**
+      serviceId: elk-service-vehicle
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-oss:
+      path: /oss/**
+      serviceId: elk-service-oss
+      stripPrefix: false # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-activiti:
+      path: /activiti/**
+      serviceId: elk-service-activiti
+      stripPrefix: false # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+  ratelimit:
+    key-prefix: elk-ratelimite #对应用来标识请求的key的前缀
+    enabled: true
+    repository: REDIS #对应存储类型（用来存储统计信息）
+    behind-proxy: true #代理之后
+    policies:
+      elk-upms-service: #特定的路由
+        limit: 100 #可选 - 每个刷新时间窗口对应的请求数量限制
+        quota: 100 #可选-  每个刷新时间窗口对应的请求时间限制（秒）
+        refresh-interval: 3 # 刷新时间窗口的时间，默认值 (秒
+
+security:
+  validate:
+    code: false
+  sessions: stateless
+  oauth2:
+    resource:
+      loadBalanced: true
+      user-info-uri: http://elk-platform-auth/user
+      prefer-token-info: false
+      service-id: elk-platform-zuul
+
+filter:
+  urls:
+    anon:
+      - /auth/**
+      - /upms/code/*
+      - /*/v2/api-docs
+      - /webjars/**
+      - /oss/**
+      - /upms/**
+      - /activiti/**
+logging:
+  config: classpath:logback.xml
