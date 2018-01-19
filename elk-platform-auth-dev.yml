@@ -3,8 +3,8 @@ server:
 
 elk:
   auth:
-    clientId: ENC(DRVvRUB7c4AVFEFuyjBiUw==)
-    clientSecret: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
+    clientId: elk
+    clientSecret: elk123
     scope: server
 
 spring:
