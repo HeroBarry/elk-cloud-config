@@ -27,8 +27,3 @@ mybatis:
 
 logging:
   config: classpath:logback.xml
-
-logging:
-  level:
-    org:
-      springframework: DEBUG
