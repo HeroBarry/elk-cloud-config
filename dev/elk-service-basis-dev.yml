@@ -15,7 +15,7 @@ spring:
     password: ENC(i3W5sWIP+RQt4tt/dk/Qiw==)
     url: jdbc:mysql://49.4.21.180:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
   rabbitmq:
-    host: 49.4.21.180
+    host: 127.0.0.1
     port: 5672
     username: ENC(1Ehmph15o5VJIayVr90nKQ==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
