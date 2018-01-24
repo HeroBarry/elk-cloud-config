@@ -9,11 +9,6 @@ spring:
     host: 127.0.0.1
     port: 6379
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
-  rabbitmq:
-    host: 49.4.21.180
-    port: 5672
-    username: ENC(1Ehmph15o5VJIayVr90nKQ==)
-    password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
   jaskson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
