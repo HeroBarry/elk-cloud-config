@@ -1,13 +1,6 @@
 server:
   port: 8003
 
-spring:
-  rabbitmq:
-    host: 127.0.0.1
-    port: 5672
-    username: ENC(1Ehmph15o5VJIayVr90nKQ==)
-    password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
-
 hystrix:
   command:
     default:
@@ -86,6 +79,3 @@ filter:
       - /upms/code/*
       - /*/v2/api-docs
       - /webjars/**
-
-logging:
-  config: classpath:logback.xml

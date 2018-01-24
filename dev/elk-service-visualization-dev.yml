@@ -11,7 +11,3 @@ server:
   tomcat:
     uri-encoding: UTF-8
 
-#logging:
-#  level:
-#    org:
-#      springframework: DEBUG
