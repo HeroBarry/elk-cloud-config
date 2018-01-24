@@ -60,7 +60,12 @@ zuul:
     elk-service-student:
       path: /student/**
       serviceId: elk-service-student
-      stripPrefix: false
+      stripPrefix: false # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-visit:
+      path: /visit/**
+      serviceId: elk-service-visit
+      stripPrefix: false # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
       sensitiveHeaders:
   ratelimit:
     key-prefix: elk-ratelimite #对应用来标识请求的key的前缀
