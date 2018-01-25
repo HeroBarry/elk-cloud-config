@@ -95,5 +95,3 @@ filter:
       - /activiti/**
       - /student/**
       - /visit/**
-logging:
-  config: classpath:logback.xml

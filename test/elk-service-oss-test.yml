@@ -20,6 +20,3 @@ spring:
 mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
   configLocation: classpath:mybatis.xml
-
-logging:
-  config: classpath:logback.xml
