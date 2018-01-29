@@ -40,6 +40,11 @@ zuul:
       serviceId: elk-service-vehicle
       stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
       sensitiveHeaders:
+    elk-service-student:
+      path: /student/**
+      serviceId: elk-service-student
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
     elk-service-oss:
       path: /oss/**
       serviceId: elk-service-oss
