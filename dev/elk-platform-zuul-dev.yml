@@ -82,8 +82,9 @@ filter:
     anon:
       - /auth/**
       - /admin/code/*
-      - **/swagger-resources/**
-      - **/swagger-ui.html/**
+      - /swagger-resources/**
+      - /swagger-ui.html/**
+      - /swagger-ui.html
       - /*/v2/api-docs
-      - **/swagger/api-docs
+      - /swagger/api-docs
       - /webjars/**
