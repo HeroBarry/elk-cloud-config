@@ -76,6 +76,9 @@ filter:
   urls:
     anon:
       - /auth/**
-      - /upms/code/*
+      - /admin/code/*
+      - /swagger-resources/**
+      - /swagger-ui.html
       - /*/v2/api-docs
+      - /swagger/api-docs
       - /webjars/**
