@@ -26,4 +26,4 @@ pagehelper:
 # Mybatis配置
 mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
-  configLocation: classpath:mybatis.xml
+
