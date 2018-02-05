@@ -9,10 +9,6 @@ spring:
     port: 5672
     username: ENC(1Ehmph15o5VJIayVr90nKQ==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
-  jaskson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
-    locale: zh
   http:
     multipart:
       max-file-size: 1000MB
