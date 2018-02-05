@@ -95,3 +95,4 @@ filter:
       - /webjars/**
       - /visit/**
       - /activiti/**
+      - /activiti/404.html
