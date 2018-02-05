@@ -93,3 +93,4 @@ filter:
       - /*/v2/api-docs
       - /swagger/api-docs
       - /webjars/**
+      - /visit/**
