@@ -86,7 +86,7 @@ filter:
   urls:
     anon:
       - /auth/**
-      - /admin/code/*
+      - /upms/code/*
       - /swagger-resources/**
       - /swagger-ui.html
       - /swagger-ui.html/**
