@@ -93,5 +93,6 @@ filter:
       - /*/v2/api-docs
       - /swagger/api-docs
       - /webjars/**
+      - /basis/**
       - /activiti/**
       - /activiti/404.html
