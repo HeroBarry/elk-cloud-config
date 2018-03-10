@@ -23,6 +23,7 @@ pagehelper:
   params: count=countSql
 
 swagger:
+  enable: true
   basepackage: com.elk.cloud.upms.controller #扫描api包路径
   title: Elk upms API #API 标题
   description: 控制用户权限 #API描述
