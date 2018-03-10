@@ -6,6 +6,3 @@ elk:
     clientId: ENC(DRVvRUB7c4AVFEFuyjBiUw==)
     clientSecret: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
     scope: server
-
-swagger:
-  enable: false

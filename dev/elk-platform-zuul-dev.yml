@@ -97,6 +97,3 @@ filter:
       - /activiti/**
       - /activiti/404.html
       - /excle/**
-
-swagger:
-  enable: false
