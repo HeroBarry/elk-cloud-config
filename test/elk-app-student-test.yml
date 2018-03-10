@@ -1,5 +1,5 @@
 server:
-  port: 8111
+  port: 8118
 
 # Redis cache 过期时间设置
 redis:
