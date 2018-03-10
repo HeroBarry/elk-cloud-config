@@ -24,8 +24,14 @@ pagehelper:
 
 swagger:
     basepackage: com.elk.cloud.upms.controller #扫描api包路径
-    name: 权限管理 #api名称
-    description: 控制用户权限 #api描述
+    title: Elk upms API #API 标题
+    description: 控制用户权限 #API描述
+    version: 1.0  #版本号
+    name: 1.0  #版本号
+    contact:
+      name: 漫步
+      url: http://my.csdn.net
+      email: 1126281729@qq.com
 
 # Mybatis配置
 mybatis:
