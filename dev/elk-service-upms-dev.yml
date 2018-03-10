@@ -24,9 +24,8 @@ pagehelper:
 
 swagger:
     basepackage: com.elk.cloud.upms.controller #扫描api包路径
-    service:
-        name: 权限管理 #api名称
-        description: 控制用户权限 #api描述
+    name: 权限管理 #api名称
+    description: 控制用户权限 #api描述
 
 # Mybatis配置
 mybatis:
