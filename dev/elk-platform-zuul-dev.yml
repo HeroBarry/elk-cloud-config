@@ -71,31 +71,31 @@ zuul:
         quota: 100 #可选-  每个刷新时间窗口对应的请求时间限制（秒）
         refresh-interval: 3 # 刷新时间窗口的时间，默认值 (秒
 
-#security:
-#  validate:
-#    code: false
-#  sessions: stateless
-#  oauth2:
-#    resource:
-#      loadBalanced: true
-#      user-info-uri: http://elk-platform-auth/user
-#      prefer-token-info: false
-#      service-id: elk-platform-zuul
-
 security:
   validate:
     code: false
   sessions: stateless
   oauth2:
-    client:
-      client-id: ENC(DRVvRUB7c4AVFEFuyjBiUw==)
-      client-secret: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
     resource:
       loadBalanced: true
-      token-info-uri: ${security.auth.server}/oauth/check-token
+      user-info-uri: http://elk-platform-auth/user
+      prefer-token-info: false
       service-id: elk-platform-zuul
-      jwt:
-         key-uri: ${security.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
+
+#security:
+#  validate:
+#    code: false
+#  sessions: stateless
+#  oauth2:
+#    client:
+#      client-id: ENC(DRVvRUB7c4AVFEFuyjBiUw==)
+#      client-secret: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
+#    resource:
+#      loadBalanced: true
+#      token-info-uri: ${security.auth.server}/oauth/check-token
+#      service-id: elk-platform-zuul
+#      jwt:
+#         key-uri: ${security.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
 
 urls:
   anon:
