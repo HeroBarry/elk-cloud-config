@@ -78,7 +78,7 @@ security:
   oauth2:
     resource:
       loadBalanced: true
-      user-info-uri: http://elk-platform-auth/user
+      user-info-uri: http://elk-platform-auth/authentication/user
       prefer-token-info: false
       service-id: elk-platform-zuul
 
@@ -111,3 +111,4 @@ urls:
     - /activiti/**
     - /activiti/404.html
     - /excle/**
+    - /authentication/**
