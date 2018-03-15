@@ -127,4 +127,6 @@ urls:
     - /activiti/404.html
     - /excle/**
     - /authentication/**
-    - /app/**
+    - /appstudent/**
+    - /appsalesman/**
+    - /appcoack/**
