@@ -115,7 +115,7 @@ security:
 urls:
   anon:
     - /auth/**
-    - /upms/code/*
+    - /*/code/*
     - /swagger-resources/**
     - /swagger-ui.html
     - /swagger-ui.html/**
