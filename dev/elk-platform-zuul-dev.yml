@@ -56,7 +56,7 @@ zuul:
       stripPrefix: false # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
       sensitiveHeaders:
     elk-service-coach:
-      path: /app/coack/**
+      path: /app/coach/**
       serviceId: elk-app-coach
       stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
       sensitiveHeaders:
