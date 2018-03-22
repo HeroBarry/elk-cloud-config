@@ -5,7 +5,7 @@ server:
 redis:
   open: false  # 是否开启redis缓存  true开启   false关闭
   cache:
-    expiration: 3600
+    expiration: 60000
 
 # datasoure默认使用JDBC
 spring:

@@ -14,10 +14,6 @@ spring:
       max-file-size: 1000MB
       max-request-size: 1000MB
 
-cache:
-  redis:
-    expiration: 3601
-
 ribbon:
   Httpclient:
     enable: false
