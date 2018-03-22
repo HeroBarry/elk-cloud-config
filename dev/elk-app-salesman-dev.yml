@@ -26,3 +26,10 @@ pagehelper:
 # Mybatis配置
 mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
+
+swagger:
+  basepackage: com.elk.cloud.salesman.controller #扫描api包路径
+  title: Elk APP SALESMAN API #API 标题
+  description: 小程序市场部 #API描述
+  version: 1.0  #版本号
+  name: 1.0  #版本号
