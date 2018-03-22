@@ -33,10 +33,3 @@ swagger:
 # Mybatis配置
 mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
-
-swagger:
-  basepackage: com.elk.cloud.upms.controller #扫描api包路径
-  title: ELK CLOUD SERVICE UPMS #API 标题
-  description: 小程序教练端 #API描述
-  version: 1.0  #版本号
-  name: 1.0  #版本号
