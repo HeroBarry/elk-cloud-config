@@ -34,7 +34,7 @@ spring:
     expose-spring-macro-helpers: true
     prefer-file-system-access: true
     suffix: .ftl
-    template-loader-path: classpath:/views/
+    template-loader-path: classpath:/templates/
 
 #分页插件
 pagehelper:
