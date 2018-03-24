@@ -14,9 +14,6 @@ zuul:
   host:
     connect-timeout-millis: 30000  #连接超时（豪秒）
     socket-timeout-millis: 30000
-  SendErrorFilter:
-    post:
-      disable: true
   routes:
     elk-platform-auth:
       path: /auth/**
