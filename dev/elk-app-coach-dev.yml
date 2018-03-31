@@ -12,7 +12,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
     username: ENC(i3W5sWIP+RQt4tt/dk/Qiw==)
-    password: c2hhbmdxdWFuMTg2OTY1OTM2NjEhQA==
+    password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
     url: jdbc:mysql://localhost:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
 
 #分页插件
