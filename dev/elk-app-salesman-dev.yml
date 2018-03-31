@@ -22,7 +22,6 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
 
-
 # Mybatis配置
 mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
