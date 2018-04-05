@@ -22,8 +22,13 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
 
-
 # Mybatis配置
 mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
 
+swagger:
+  basepackage: com.elk.cloud.activiti.controller #扫描api包路径
+  title: ELK CLOUD SERVICE ACTIVITI #API 标题
+  description: PC端流程控制 #API描述
+  version: 1.0  #版本号
+  name: 1.0  #版本号
