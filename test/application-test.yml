@@ -9,18 +9,10 @@ spring:
     port: 5672
     username: ENC(1Ehmph15o5VJIayVr90nKQ==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
-  jaskson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
-    locale: zh
   http:
     multipart:
       max-file-size: 1000MB
       max-request-size: 1000MB
-
-cache:
-  redis:
-    expiration: 3601
 
 ribbon:
   Httpclient:
@@ -29,7 +21,7 @@ ribbon:
     enable: true
   ReadTimeout: 30000
   ConnectTimeout: 30000
-  
+
 feign:
   okhttp:
     enable: true
@@ -45,6 +37,6 @@ endpoints:
     enabled: true
   shutdown:
     enabled: false
-
+# 日志配置
 logging:
-    config: classpath:logback.xml
+  config: classpath:logback.xml

@@ -6,3 +6,14 @@ elk:
     clientId: ENC(DRVvRUB7c4AVFEFuyjBiUw==)
     clientSecret: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
     scope: server
+
+
+urls:
+  anon:
+    - /authentication/**
+    - /**/*.css
+    - /social
+    - /signin
+    - /signup
+    - /mobile/token
+    - /wechat/token

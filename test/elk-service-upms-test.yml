@@ -12,7 +12,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
     username: ENC(i3W5sWIP+RQt4tt/dk/Qiw==)
-    password: ENC(i3W5sWIP+RQt4tt/dk/Qiw==)
+    password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
     url: jdbc:mysql://127.0.0.1:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
 
 #分页插件
@@ -22,10 +22,14 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
 
-
 # Mybatis配置
 mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
 
-
+swagger:
+  basepackage: com.elk.cloud.upms.controller #扫描api包路径
+  title: Elk upms API #API 标题
+  description: 控制用户权限 #API描述
+  version: 1.0  #版本号
+  name: 1.0  #版本号
 

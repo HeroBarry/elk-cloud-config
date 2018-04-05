@@ -86,17 +86,6 @@ zuul:
         quota: 100 #可选-  每个刷新时间窗口对应的请求时间限制（秒）
         refresh-interval: 3 # 刷新时间窗口的时间，默认值 (秒
 
-#security:
-#  validate:
-#    code: false
-#  sessions: stateless
-#  oauth2:
-#    resource:
-#      loadBalanced: true
-#      user-info-uri: http://elk-platform-auth/user
-#      prefer-token-info: false
-#      service-id: elk-platform-zuul
-
 security:
   validate:
     code: false
