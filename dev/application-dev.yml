@@ -1,6 +1,6 @@
 spring:
   jackson:
-    time-zone: GMT+8
+    #time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
   redis:
     remote: true        #是否是cachecloud 获取
