@@ -4,7 +4,7 @@ server:
 # Redis cache 过期时间设置
 redis:
   cache:
-    expiration: 60000
+    expiration: 1000*60*60*24
 
 # datasoure默认使用JDBC
 spring:
