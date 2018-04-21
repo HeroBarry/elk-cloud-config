@@ -37,6 +37,12 @@ endpoints:
     enabled: true
   shutdown:
     enabled: false
+
+#加密配置
+jasypt:
+  encryptor:
+    password: elk123
+
 # 日志配置
 logging:
   config: classpath:logback.xml
