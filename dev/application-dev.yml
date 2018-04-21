@@ -1,3 +1,8 @@
+#加密配置
+jasypt:
+  encryptor:
+    password: elk123
+
 spring:
   redis:
     remote: true        #是否是cachecloud 获取 192.168.99.100
@@ -37,11 +42,6 @@ endpoints:
     enabled: true
   shutdown:
     enabled: false
-
-#加密配置
-jasypt:
-  encryptor:
-    password: elk123
 
 # 日志配置
 logging:
