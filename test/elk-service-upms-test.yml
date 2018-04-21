@@ -4,7 +4,7 @@ server:
 # Redis cache 过期时间设置
 redis:
   cache:
-    expiration: 3600
+    expiration: 60000
 
 # datasoure默认使用JDBC
 spring:
@@ -13,7 +13,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: ENC(i3W5sWIP+RQt4tt/dk/Qiw==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
-    url: jdbc:mysql://127.0.0.1:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:mysql://192.168.99.100:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
 
 #分页插件
 pagehelper:
@@ -28,8 +28,7 @@ mybatis:
 
 swagger:
   basepackage: com.elk.cloud.upms.controller #扫描api包路径
-  title: Elk UPMS API #API 标题
+  title: Elk upms API #API 标题
   description: 控制用户权限 #API描述
   version: 1.0  #版本号
   name: 1.0  #版本号
-
