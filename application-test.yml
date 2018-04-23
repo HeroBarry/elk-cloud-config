@@ -6,11 +6,11 @@ jasypt:
 spring:
   redis:
     remote: true        #是否是cachecloud 获取 192.168.99.100
-    host: 192.168.99.100
+    host: 192.168.1.80
     port: 6379
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
   rabbitmq:
-    host: 192.168.99.100
+    host: 192.168.1.80
     port: 5672
     username: ENC(1Ehmph15o5VJIayVr90nKQ==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
@@ -26,7 +26,7 @@ ribbon:
     enable: true
   ReadTimeout: 30000
   ConnectTimeout: 30000
-
+  
 feign:
   okhttp:
     enable: true
