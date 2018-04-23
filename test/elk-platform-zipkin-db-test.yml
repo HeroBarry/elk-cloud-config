@@ -1,10 +1,5 @@
 server:
-  port: 8111
-
-# Redis cache 过期时间设置
-redis:
-  cache:
-    expiration: 60000
+  port: 8005
 
 # datasoure默认使用JDBC
 spring:
@@ -15,15 +10,12 @@ spring:
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
     url: jdbc:mysql://192.168.1.80:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
 
-#分页插件
-pagehelper:
-  helperDialect: mysql
-  reasonable: true
-  supportMethodsArguments: true
-  params: count=countSql
-
-
-# Mybatis配置
-mybatis:
-  mapperLocations: classpath:/mapper/**/*.xml
-
+zipkin:
+  collector:
+    rabbitmq:
+      addresses: 192.168.1.80:5672
+      password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
+      username: ENC(1Ehmph15o5VJIayVr90nKQ==)
+      queue: zipkin
+  storage:
+    type: mysql
