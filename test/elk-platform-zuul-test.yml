@@ -1,0 +1,124 @@
+server:
+  port: 8003
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+
+zuul:
+  ignoredServices: '*' #忽略服务  *代表所有的服务都会被忽略
+  host:
+    connect-timeout-millis: 30000  #连接超时（豪秒）
+    socket-timeout-millis: 30000
+  routes:
+    elk-platform-auth:
+      path: /auth/**
+      serviceId: elk-platform-auth
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-upms:
+      path: /upms/**
+      serviceId: elk-service-upms
+      stripPrefix: true   # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-basis:
+      path: /basis/**
+      serviceId: elk-service-basis
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-visit:
+      path: /visit/**
+      serviceId: elk-service-visit
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-quartz:
+      path: /quartz/**
+      serviceId: elk-service-quartz
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-vehicle:
+      path: /vehicle/**
+      serviceId: elk-service-vehicle
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-student:
+      path: /stu/**
+      serviceId: elk-service-student
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-bespeak:
+      path: /bespeak/**
+      serviceId: elk-service-bespeak
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-oss:
+      path: /oss/**
+      serviceId: elk-service-oss
+      stripPrefix: false # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-coach:
+      path: /app/coach/**
+      serviceId: elk-app-coach
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-salesman:
+      path: /app/salesman/**
+      serviceId: elk-app-salesman
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-app-student:
+      path: /app/student/**
+      serviceId: elk-app-student
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+    elk-service-activiti:
+      path: /activiti/**
+      serviceId: elk-service-activiti
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
+  ratelimit:
+    key-prefix: elk-ratelimite #对应用来标识请求的key的前缀
+    enabled: true
+    repository: REDIS #对应存储类型（用来存储统计信息）
+    behind-proxy: true #代理之后
+    policies:
+      elk-upms-service: #特定的路由
+        limit: 100 #可选 - 每个刷新时间窗口对应的请求数量限制
+        quota: 100 #可选-  每个刷新时间窗口对应的请求时间限制（秒）
+        refresh-interval: 3 # 刷新时间窗口的时间，默认值 (秒
+
+security:
+  validate:
+    code: false
+  sessions: stateless
+  oauth2:
+    client:
+      client-id: ENC(DRVvRUB7c4AVFEFuyjBiUw==)
+      client-secret: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
+    resource:
+      loadBalanced: true
+      token-info-uri: ${security.auth.server}/oauth/check-token
+      service-id: elk-platform-zuul
+      jwt:
+         key-uri: ${security.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
+
+urls:
+  anon:
+    - /auth/**
+    - /*/code/*
+    - /swagger-resources/**
+    - /swagger-ui.html
+    - /swagger-ui.html/**
+    - /*/v2/api-docs
+    - /swagger/api-docs
+    - /webjars/**
+    - /basis/**
+    - /activiti/**
+    - /activiti/404.html
+    - /excle/**
+    - /authentication/**
+    - /app/**

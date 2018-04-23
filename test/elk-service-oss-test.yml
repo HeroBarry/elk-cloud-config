@@ -1,0 +1,30 @@
+server:
+  port: 8103
+
+# Redis cache 过期时间设置
+redis:
+  open: false  # 是否开启redis缓存  true开启   false关闭
+  cache:
+    expiration: 3600
+
+# datasoure默认使用JDBC
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    username: ENC(i3W5sWIP+RQt4tt/dk/Qiw==)
+    password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
+    url: jdbc:mysql://127.0.0.1:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+
+#分页插件
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+# Mybatis配置
+mybatis:
+  mapperLocations: classpath:/mapper/**/*.xml
+

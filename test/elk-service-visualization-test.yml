@@ -1,0 +1,13 @@
+server:
+  port: 8111
+
+spring:
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+server:
+  tomcat:
+    uri-encoding: UTF-8
+
