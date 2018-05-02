@@ -21,7 +21,7 @@ spring:
 
 ribbon:
   Httpclient:
-    enable: false
+    enable: true
   OkHttp:
     enable: true
   ReadTimeout: 30000
