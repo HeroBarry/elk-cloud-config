@@ -120,6 +120,7 @@ urls:
     - /swagger-ui.html/**
     - /*/v2/api-docs
     - /swagger/api-docs
+    - /upms/user/info
     - /webjars/**
     - /basis/**
     - /activiti/**
