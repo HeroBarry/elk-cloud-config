@@ -27,7 +27,7 @@ mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
 
 swagger:
-  basepackage: com.elk.cloud.upms.controller #扫描api包路径
+  basepackage: com.elk.cloud.service.upms.controller #扫描api包路径
   title: Elk upms API #API 标题
   description: 控制用户权限 #API描述
   version: 1.0  #版本号

@@ -28,7 +28,7 @@ mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
 
 swagger:
-  basepackage: com.elk.cloud.student.controller #扫描api包路径
+  basepackage: com.elk.cloud.service.student.controller #扫描api包路径
   title: ELK CLOUD SERVICE STUDENT #API 标题
   description: PC端学员 #API描述
   version: 1.0  #版本号
