@@ -128,4 +128,5 @@ urls:
     - /excle/**
     - /authentication/**
     - /app/**
+    - /oss/**
     - /visualization/**
