@@ -17,19 +17,32 @@ zuul:
   routes:
     elk-platform-auth:
       path: /auth/**
-    elk-service-upms: /upms/**
-    elk-service-basis: /basis/**
-    elk-service-visit: /visit/**
-    elk-service-quartz: /quartz/**
-    elk-service-vehicle: /vehicle/**
-    elk-service-student: /stu/**
-    elk-service-bespeak: /bespeak/**
-    elk-service-oss: /oss/**
-    elk-service-coach: /app/coach/**
-    elk-service-salesman: /app/salesman/**
-    elk-service-app-student: /app/student/**
-    elk-service-activiti: /activiti/**
-    elk-service-visualization:  /visualization/**
+    elk-service-upms:
+      path: /upms/**
+    elk-service-basis:
+      path: /basis/**
+    elk-service-visit:
+      path: /visit/**
+    elk-service-quartz:
+      path: /quartz/**
+    elk-service-vehicle:
+      path: /vehicle/**
+    elk-service-student:
+      path: /stu/**
+    elk-service-bespeak:
+      path: /bespeak/**
+    elk-service-oss:
+      path: /oss/**
+    elk-service-coach:
+      path: /app/coach/**
+    elk-service-salesman:
+      path: /app/salesman/**
+    elk-service-app-student:
+      path: /app/student/**
+    elk-service-activiti:
+      path: /activiti/**
+    elk-service-visualization:
+      path:  /visualization/**
   ratelimit:
     key-prefix: elk-ratelimite #对应用来标识请求的key的前缀
     enabled: true
