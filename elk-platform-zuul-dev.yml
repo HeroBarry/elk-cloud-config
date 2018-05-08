@@ -127,4 +127,4 @@ urls:
     - /activiti/404.html
     - /excle/**
     - /app/**
-    - /oss/**
+    - /oss/upload
