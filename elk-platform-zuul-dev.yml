@@ -15,7 +15,8 @@ zuul:
     connect-timeout-millis: 30000  #连接超时（豪秒）
     socket-timeout-millis: 30000
   routes:
-    elk-platform-auth: /auth/**
+    elk-platform-auth:
+      path: /auth/**
     elk-service-upms: /upms/**
     elk-service-basis: /basis/**
     elk-service-visit: /visit/**
