@@ -15,76 +15,20 @@ zuul:
     connect-timeout-millis: 30000  #连接超时（豪秒）
     socket-timeout-millis: 30000
   routes:
-    elk-platform-auth:
-      path: /auth/**
-      serviceId: elk-platform-auth
-      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      sensitiveHeaders:
-    elk-service-upms:
-      path: /upms/**
-      serviceId: elk-service-upms
-      stripPrefix: true   # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      sensitiveHeaders:
-    elk-service-basis:
-      path: /basis/**
-      serviceId: elk-service-basis
-      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      sensitiveHeaders:
-    elk-service-visit:
-      path: /visit/**
-      serviceId: elk-service-visit
-      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      sensitiveHeaders:
-    elk-service-quartz:
-      path: /quartz/**
-      serviceId: elk-service-quartz
-      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      sensitiveHeaders:
-    elk-service-vehicle:
-      path: /vehicle/**
-      serviceId: elk-service-vehicle
-      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      sensitiveHeaders:
-    elk-service-student:
-      path: /stu/**
-      serviceId: elk-service-student
-      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      sensitiveHeaders:
-    elk-service-bespeak:
-      path: /bespeak/**
-      serviceId: elk-service-bespeak
-      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      sensitiveHeaders:
-    elk-service-oss:
-      path: /oss/**
-      serviceId: elk-service-oss
-      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      sensitiveHeaders:
-    elk-service-coach:
-      path: /app/coach/**
-      serviceId: elk-app-coach
-      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      sensitiveHeaders:
-    elk-service-salesman:
-      path: /app/salesman/**
-      serviceId: elk-app-salesman
-      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      sensitiveHeaders:
-    elk-service-app-student:
-      path: /app/student/**
-      serviceId: elk-app-student
-      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      sensitiveHeaders:
-    elk-service-activiti:
-      path: /activiti/**
-      serviceId: elk-service-activiti
-      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      sensitiveHeaders:
-    elk-service-visualization:
-      path: /visualization/**
-      serviceId: elk-service-visualization
-      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
-      sensitiveHeaders:
+    elk-platform-auth: /auth/**
+    elk-service-upms: /upms/**
+    elk-service-basis: /basis/**
+    elk-service-visit: /visit/**
+    elk-service-quartz: /quartz/**
+    elk-service-vehicle: /vehicle/**
+    elk-service-student: /stu/**
+    elk-service-bespeak: /bespeak/**
+    elk-service-oss: /oss/**
+    elk-service-coach: /app/coach/**
+    elk-service-salesman: /app/salesman/**
+    elk-service-app-student: /app/student/**
+    elk-service-activiti: /activiti/**
+    elk-service-visualization:  /visualization/**
   ratelimit:
     key-prefix: elk-ratelimite #对应用来标识请求的key的前缀
     enabled: true
@@ -126,7 +70,7 @@ urls:
     - /activiti/**
     - /activiti/404.html
     - /excle/**
-    - /authentication/**
     - /app/**
     - /oss/**
     - /visualization/**
+    - /stu/upms/**
