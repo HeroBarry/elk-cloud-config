@@ -8,12 +8,12 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: ENC(i3W5sWIP+RQt4tt/dk/Qiw==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
-    url: jdbc:mysql://192.168.1.125:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:mysql://192.168.1.128:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
 
 zipkin:
   collector:
     rabbitmq:
-      addresses: 192.168.1.125:5672
+      addresses: 192.168.1.128:5672
       password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
       username: ENC(1Ehmph15o5VJIayVr90nKQ==)
       queue: zipkin
