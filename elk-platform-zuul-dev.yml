@@ -12,8 +12,8 @@ hystrix:
 zuul:
   ignoredServices: '*' #忽略服务  *代表所有的服务都会被忽略
   host:
-    connect-timeout-millis: 30000  #连接超时（豪秒）
-    socket-timeout-millis: 30000
+    connect-timeout-millis: 50000  #连接超时（豪秒）
+    socket-timeout-millis: 50000
   routes:
     elk-platform-auth:
       path: /auth/**
