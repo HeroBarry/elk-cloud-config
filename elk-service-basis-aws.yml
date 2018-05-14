@@ -1,5 +1,5 @@
 server:
-  port: 8116
+  port: 8101
 
 # Redis cache 过期时间设置
 redis:
@@ -13,7 +13,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: ENC(i3W5sWIP+RQt4tt/dk/Qiw==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
-    url: jdbc:mysql://192.168.1.128:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:mysql://52.83.103.63:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
 
 #分页插件
 pagehelper:
@@ -22,13 +22,14 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
 
+
 # Mybatis配置
 mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
 
 swagger:
-  basepackage: com.elk.cloud.coach.controller #扫描api包路径
-  title: Elk APP COACH API #API 标题
-  description: 小程序教练端 #API描述
+  basepackage: com.elk.cloud.service.basis.controller #扫描api包路径
+  title: ELK CLOUD SERVICE BASIS #API 标题
+  description: PC端基础服务 #API描述
   version: 1.0  #版本号
   name: 1.0  #版本号

@@ -6,11 +6,12 @@ jasypt:
 spring:
   redis:
     remote: true        #是否是cachecloud 获取 192.168.99.100
-    host: 127.0.0.1
+    host: 52.83.103.63
     port: 6379
+    username: ENC(1Ehmph15o5VJIayVr90nKQ==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
   rabbitmq:
-    host: 192.168.1.128
+    host: 52.83.103.63
     port: 5672
     username: ENC(1Ehmph15o5VJIayVr90nKQ==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)

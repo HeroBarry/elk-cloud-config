@@ -4,7 +4,7 @@ server:
 zipkin:
   collector:
     rabbitmq:
-      addresses: 192.168.1.128:5672
+      addresses: 52.83.103.63:5672
       password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
       username: ENC(1Ehmph15o5VJIayVr90nKQ==)
       queue: zipkin
