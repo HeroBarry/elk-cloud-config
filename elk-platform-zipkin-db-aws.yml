@@ -15,7 +15,7 @@ zipkin:
     rabbitmq:
       addresses: 52.83.103.63:5672
       password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
-      username: ENC(1Ehmph15o5VJIayVr90nKQ==)
+      username: ENC(4RcC+fEwUkadxvwSE/IEgw==)
       queue: zipkin
   storage:
     type: mysql
