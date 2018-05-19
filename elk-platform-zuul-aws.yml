@@ -107,7 +107,7 @@ security:
   sessions: stateless
   oauth2:
     client:
-      client-id: ENC(DRVvRUB7c4AVFEFuyjBiUw==)
+      client-id: ENC(4RcC+fEwUkadxvwSE/IEgw==)
       client-secret: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
     resource:
       loadBalanced: true
