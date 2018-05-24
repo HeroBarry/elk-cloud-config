@@ -3,15 +3,18 @@ server:
 
 elk:
   auth:
-    clientId: ENC(4RcC+fEwUkadxvwSE/IEgw==)
+    clientId: ENC(DRVvRUB7c4AVFEFuyjBiUw==)
     clientSecret: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
     scope: server
+
 
 urls:
   anon:
     - /authentication/**
     - /**/*.css
     - /social
+    - /info
+    - /health
     - /signin
     - /signup
     - /mobile/token
