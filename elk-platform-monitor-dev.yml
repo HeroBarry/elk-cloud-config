@@ -10,7 +10,7 @@ spring:
         endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream,turbine.stream
 
 turbine:
-  app-config: elk-platform-zuul,elk-cloud-app-student #收集监控信息的服务名
+  app-config: elk-platform-zuul #收集监控信息的服务名
   combine-host-port: true
   cluster-name-expression: new String('default') #集群名称
 
