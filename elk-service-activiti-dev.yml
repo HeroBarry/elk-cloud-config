@@ -16,6 +16,7 @@ spring:
     username: ENC(i3W5sWIP+RQt4tt/dk/Qiw==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
     url: jdbc:mysql://192.168.1.128:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    schema[0]: classpath:/activiti.sql
   freemarker:
     allow-request-override: false
     allow-session-override: false
