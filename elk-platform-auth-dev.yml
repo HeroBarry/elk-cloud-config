@@ -19,6 +19,7 @@ urls:
     - /signup
     - /mobile/token
     - /wechat/token
+    - /wechat/refresh_token
 
 #spring:
 #  freemarker:
