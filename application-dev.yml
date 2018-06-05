@@ -34,30 +34,30 @@ ribbon:
   ConnectTimeout: 30000
   
 feign:
-  hystrix:
-    enabled: true
+#  hystrix:
+#    enabled: true
   okhttp:
     enable: true
   httpclient:
     enable: false
-  client:
-    config:
-      feignName:
-        connectTimeout: 30000
-        readTimeout: 30000
+#  client:
+#    config:
+#      feignName:
+#        connectTimeout: 30000
+#        readTimeout: 30000
 
-hystrix:
-  threadpool:
-    default:
-      coreSize: 500
-      maxQueueSize: 1000
-      queueSizeRejectionThreshold: 800
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 60000
+#hystrix:
+#  threadpool:
+#    default:
+#      coreSize: 500
+#      maxQueueSize: 1000
+#      queueSizeRejectionThreshold: 800
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 60000
 
 #监控短点配置
 management:
