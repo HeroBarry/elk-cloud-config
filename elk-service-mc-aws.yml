@@ -1,5 +1,5 @@
 server:
-  port: 8120
+  port: 8119
 
 # Redis cache 过期时间设置
 redis:
@@ -13,7 +13,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: ENC(i3W5sWIP+RQt4tt/dk/Qiw==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
-    url: jdbc:mysql://mysql.cwhq4oci2qko.rds.cn-northwest-1.amazonaws.com.cn/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:mysql://192.168.1.128:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
 #    hikari:
 #      #jdbc-url:
 #      minimum-idle: 5
@@ -24,6 +24,7 @@ spring:
 #      connection-timeout: 30000
 #      connection-test-query: SELECT 1
 #      max-lifetime: 1800000
+
 
 #分页插件
 pagehelper:

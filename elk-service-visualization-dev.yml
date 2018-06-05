@@ -1,5 +1,5 @@
 server:
-  port: 8110
+  port: 8111
 
 # Redis cache 过期时间设置
 redis:
@@ -37,9 +37,3 @@ pagehelper:
 mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
 
-swagger:
-  basepackage: com.elk.cloud.visit.controller #扫描api包路径
-  title: ELK CLOUD SERVICE VISIT #API 标题
-  description: PC端来访 #API描述
-  version: 1.0  #版本号
-  name: 1.0  #版本号

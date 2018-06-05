@@ -15,18 +15,18 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: ENC(i3W5sWIP+RQt4tt/dk/Qiw==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
-    url: jdbc:mysql://mysql.cwhq4oci2qko.rds.cn-northwest-1.amazonaws.com.cn/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:mysql://192.168.1.128:3306/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
     schema[0]: classpath:/activiti.sql
- #    hikari:
- #      #jdbc-url:
- #      minimum-idle: 5
- #      maximum-pool-size: 50
- #      auto-commit: true
- #      idle-timeout: 30000
- #      pool-name: DatebookHikariCP
- #      connection-timeout: 30000
- #      connection-test-query: SELECT 1
- #      max-lifetime: 1800000
+#    hikari:
+#      #jdbc-url:
+#      minimum-idle: 5
+#      maximum-pool-size: 50
+#      auto-commit: true
+#      idle-timeout: 30000
+#      pool-name: DatebookHikariCP
+#      connection-timeout: 30000
+#      connection-test-query: SELECT 1
+#      max-lifetime: 1800000
   freemarker:
     allow-request-override: false
     allow-session-override: false
@@ -55,7 +55,7 @@ mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
 
 swagger:
-  basepackage: com.elk.cloud.service.activiti.controller #扫描api包路径
+  basepackage: com.elk.cloud.activiti.controller #扫描api包路径
   title: ELK CLOUD SERVICE ACTIVITI #API 标题
   description: PC端流程控制 #API描述
   version: 1.0  #版本号

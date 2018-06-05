@@ -2,18 +2,26 @@ server:
   port: 8003
 
 hystrix:
+  threadpool:
+    default:
+      coreSize: 500 # 线程池核心线程数（默认为10）
+      maxQueueSize: 1000 # 最大排队长度。
+      queueSizeRejectionThreshold: 800 # 排队线程数量阈值，默认为5，达到时拒绝，如果配置了该选项，队列的大小是该队列
   command:
     default:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 30000
+            timeoutInMilliseconds: 60000 # 超时时间（默认1000ms，单位：ms）
 
 zuul:
   ignoredServices: '*' #忽略服务  *代表所有的服务都会被忽略
   host:
     connect-timeout-millis: 50000  #连接超时（豪秒）
     socket-timeout-millis: 50000
+  ribbon:
+    eager-load:
+      enabled: true
   routes:
     elk-platform-auth:
       path: /auth/**
