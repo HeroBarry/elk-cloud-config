@@ -3,6 +3,10 @@ server:
 
 # datasoure默认使用JDBC
 spring:
+  application:
+    name: zipkin
+  sleuth:
+    enabled: false
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
@@ -27,5 +31,6 @@ zipkin:
       password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
       username: ENC(4RcC+fEwUkadxvwSE/IEgw==)
       queue: zipkin
+
   storage:
     type: mysql

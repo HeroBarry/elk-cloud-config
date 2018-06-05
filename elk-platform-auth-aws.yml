@@ -19,3 +19,8 @@ urls:
     - /signup
     - /mobile/token
     - /wechat/token
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients: elk-service-upms, elk-app-student, elk-app-coach, elk-service-basis
