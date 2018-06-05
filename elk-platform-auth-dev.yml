@@ -24,7 +24,7 @@ urls:
 ribbon:
   eager-load:
     enabled: true
-    clients: elk-service-upms, elk-app-student, elk-app-coach
+    clients: elk-service-upms, elk-app-student, elk-app-coach, elk-service-basis
 
 #spring:
 #  freemarker:
