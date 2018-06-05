@@ -40,7 +40,7 @@ mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
 
 swagger:
-  basepackage: com.elk.cloud.oss.controller #扫描api包路径
+  basepackage: com.elk.cloud.service.oss.controller #扫描api包路径
   title: ELK CLOUD SERVICE OSS #API 标题
   description: PC端单点登录 #API描述
   version: 1.0  #版本号

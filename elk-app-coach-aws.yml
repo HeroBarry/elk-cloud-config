@@ -37,7 +37,7 @@ mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
 
 swagger:
-  basepackage: com.elk.cloud.coach.controller #扫描api包路径
+  basepackage: com.elk.cloud.app.coach.controller #扫描api包路径
   title: Elk APP COACH API #API 标题
   description: 小程序教练端 #API描述
   version: 1.0  #版本号

@@ -39,7 +39,7 @@ mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
 
 swagger:
-  basepackage: com.elk.cloud.bespeak.controller #扫描api包路径
+  basepackage: com.elk.cloud.service.bespeak.controller #扫描api包路径
   title: ELK CLOUD SERVICE BESPEAK #API 标题
   description: PC端学员考试 #API描述
   version: 1.0  #版本号
