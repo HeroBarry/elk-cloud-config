@@ -32,6 +32,10 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
 
+ribbon:
+  eager-load:
+    enabled: true
+    clients: elk-service-upms
 
 # Mybatis配置
 mybatis:

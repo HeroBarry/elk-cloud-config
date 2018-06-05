@@ -21,6 +21,11 @@ urls:
     - /wechat/token
     - /wechat/refresh_token
 
+ribbon:
+  eager-load:
+    enabled: true
+    clients: elk-service-upms, elk-app-student, elk-app-coach
+
 #spring:
 #  freemarker:
 #    allow-request-override: false

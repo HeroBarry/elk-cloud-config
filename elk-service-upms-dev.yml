@@ -32,6 +32,12 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
 
+ribbon:
+  eager-load:
+    enabled: true
+    clients: elk-service-basis
+
+
 # Mybatis配置
 mybatis:
   mapperLocations: classpath:/mapper/**/*.xml

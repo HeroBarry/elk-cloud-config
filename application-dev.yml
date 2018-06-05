@@ -14,6 +14,12 @@ spring:
     port: 5672
     username: ENC(1Ehmph15o5VJIayVr90nKQ==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
+  zipkin:
+    rabbitmq:
+      queue: zipkin
+  sleuth:
+    sampler:
+      percentage: 1.0
   http:
     multipart:
       max-file-size: 1000MB
@@ -21,17 +27,37 @@ spring:
 
 ribbon:
   Httpclient:
-    enable: true
+    enable: false
   OkHttp:
     enable: true
   ReadTimeout: 30000
   ConnectTimeout: 30000
   
 feign:
+  hystrix:
+    enabled: true
   okhttp:
     enable: true
   httpclient:
     enable: false
+  client:
+    config:
+      feignName:
+        connectTimeout: 30000
+        readTimeout: 30000
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 500
+      maxQueueSize: 1000
+      queueSizeRejectionThreshold: 800
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
 
 #监控短点配置
 management:
