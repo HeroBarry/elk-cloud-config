@@ -10,7 +10,7 @@ spring:
     port: 6379
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
   rabbitmq:
-    host: 192.168.1.128
+    host: 192.168.1.185
     port: 5672
     username: ENC(1Ehmph15o5VJIayVr90nKQ==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
