@@ -68,3 +68,8 @@ endpoints:
     enabled: true
   shutdown:
     enabled: false
+
+
+# 日志配置
+logging:
+  config: classpath:logback.xml
