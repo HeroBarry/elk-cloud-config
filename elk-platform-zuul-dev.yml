@@ -98,6 +98,11 @@ zuul:
       serviceId: elk-service-finance
       stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
       sensitiveHeaders:
+    elk-service-test:
+      path: /test/**
+      serviceId: elk-service-test
+      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      sensitiveHeaders:
   ratelimit:
     key-prefix: elk-ratelimite #对应用来标识请求的key的前缀
     enabled: true
@@ -141,4 +146,5 @@ urls:
     - /excle/**
     - /app/**
     - /oss/upload
+    - /test/**
     - /visit/intention/create/*
