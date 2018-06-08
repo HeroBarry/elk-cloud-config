@@ -91,7 +91,7 @@ zuul:
     elk-service-visualization:
       path: /visualization/**
       serviceId: elk-service-visualization
-      stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
+      stripPrefix: true
       sensitiveHeaders:
     elk-service-finance:
       path: /finance/**
