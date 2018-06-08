@@ -141,3 +141,4 @@ urls:
     - /excle/**
     - /app/**
     - /oss/upload
+    - /visit/intention/create/*
