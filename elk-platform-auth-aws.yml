@@ -19,6 +19,7 @@ urls:
     - /signup
     - /mobile/token
     - /wechat/token
+    - /visit/intention/create/*
 
 ribbon:
   eager-load:
