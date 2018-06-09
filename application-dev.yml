@@ -30,12 +30,13 @@ ribbon:
     enable: false
   OkHttp:
     enable: true
-  ReadTimeout: 60000
-  ConnectTimeout: 60000
+  OkToRetryOnAllOperations: true # 对所有操作请求都进行重试
+  ReadTimeout: 60000 # 请求处理的超时时间
+  ConnectTimeout: 60000 #请求连接的超时时间
   
 feign:
-#  hystrix:
-#    enabled: true
+  hystrix:
+    enabled: true
   okhttp:
     enable: true
   httpclient:
@@ -46,18 +47,18 @@ feign:
 #        connectTimeout: 60000
 #        readTimeout: 60000
 
-#hystrix:
+hystrix:
 #  threadpool:
 #    default:
 #      coreSize: 500 # 线程池核心线程数（默认为10）
 #      maxQueueSize: 1000 # 最大排队长度。
 #      queueSizeRejectionThreshold: 800 # 排队线程数量阈值，默认为5，达到时拒绝，如果配置了该选项，队列的大小是该队列
-#  command:
-#    default:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 60000 # 超时时间（默认1000ms，单位：ms）
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000 # 超时时间（默认1000ms，单位：ms）
 
 #监控短点配置
 management:
