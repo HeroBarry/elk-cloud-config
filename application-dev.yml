@@ -14,12 +14,6 @@ spring:
     port: 5672
     username: ENC(1Ehmph15o5VJIayVr90nKQ==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
-  zipkin:
-    rabbitmq:
-      queue: zipkin
-  sleuth:
-    sampler:
-      percentage: 1.0
   http:
     multipart:
       max-file-size: 1000MB
@@ -30,35 +24,14 @@ ribbon:
     enable: false
   OkHttp:
     enable: true
-  OkToRetryOnAllOperations: true # 对所有操作请求都进行重试
   ReadTimeout: 60000 # 请求处理的超时时间
   ConnectTimeout: 60000 #请求连接的超时时间
   
 feign:
-  hystrix:
-    enabled: true
   okhttp:
     enable: true
   httpclient:
     enable: false
-#  client:
-#    config:
-#      feignName:
-#        connectTimeout: 60000
-#        readTimeout: 60000
-
-hystrix:
-#  threadpool:
-#    default:
-#      coreSize: 500 # 线程池核心线程数（默认为10）
-#      maxQueueSize: 1000 # 最大排队长度。
-#      queueSizeRejectionThreshold: 800 # 排队线程数量阈值，默认为5，达到时拒绝，如果配置了该选项，队列的大小是该队列
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 6000 # 超时时间（默认1000ms，单位：ms）
 
 #监控短点配置
 management:
