@@ -17,8 +17,8 @@ hystrix:
 zuul:
   ignoredServices: '*' #忽略服务  *代表所有的服务都会被忽略
   host:
-    connect-timeout-millis: 50000  #连接超时（豪秒）
-    socket-timeout-millis: 50000
+    connect-timeout-millis: 60000  #连接超时（豪秒）
+    socket-timeout-millis: 60000
   ribbon:
     eager-load:
       enabled: true
