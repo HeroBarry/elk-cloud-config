@@ -12,7 +12,7 @@ spring:
   rabbitmq:
     host: 52.83.103.63
     port: 5672
-    username: ENC(1Ehmph15o5VJIayVr90nKQ==)
+    username: elk
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
   http:
     multipart:
