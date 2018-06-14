@@ -1,4 +1,3 @@
-#加密配置
 jasypt:
   encryptor:
     password: elk123
@@ -6,11 +5,11 @@ jasypt:
 spring:
   redis:
     remote: true        #是否是cachecloud 获取 192.168.99.100
-    host: 52.83.103.63
+    host: mq.eluchn.com
     port: 6379
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
   rabbitmq:
-    host: 52.83.103.63
+    host: mq.eluchn.com
     port: 5672
     username: elk
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
