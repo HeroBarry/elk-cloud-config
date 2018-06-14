@@ -12,13 +12,13 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 60000 # 超时时间（默认1000ms，单位：ms）
+            timeoutInMilliseconds: 600000 # 超时时间（默认1000ms，单位：ms）
 
 zuul:
   ignoredServices: '*' #忽略服务  *代表所有的服务都会被忽略
   host:
-    connect-timeout-millis: 60000  #连接超时（豪秒）
-    socket-timeout-millis: 60000
+    connect-timeout-millis: 600000  #连接超时（豪秒）
+    socket-timeout-millis: 600000
   ribbon:
     eager-load:
       enabled: true
@@ -103,16 +103,16 @@ zuul:
       serviceId: elk-service-test
       stripPrefix: true # 从请求路径中移除代理前缀 (通过 zuul.stripPrefix=false 可以关闭这个功能)
       sensitiveHeaders:
-  ratelimit:
-    key-prefix: elk-ratelimite #对应用来标识请求的key的前缀
-    enabled: true
-    repository: REDIS #对应存储类型（用来存储统计信息）
-    behind-proxy: true #代理之后
-    policies:
-      elk-upms-service: #特定的路由
-        limit: 100 #可选 - 每个刷新时间窗口对应的请求数量限制
-        quota: 10000 #可选-  每个刷新时间窗口对应的请求时间限制（秒）
-        refresh-interval: 60 # 刷新时间窗口的时间，默认值 (秒
+#  ratelimit:
+#    key-prefix: elk-ratelimite #对应用来标识请求的key的前缀
+#    enabled: true
+#    repository: REDIS #对应存储类型（用来存储统计信息）
+#    behind-proxy: true #代理之后
+#    policies:
+#      elk-upms-service: #特定的路由
+#        limit: 100 #可选 - 每个刷新时间窗口对应的请求数量限制
+#        quota: 10000 #可选-  每个刷新时间窗口对应的请求时间限制（秒）
+#        refresh-interval: 60 # 刷新时间窗口的时间，默认值 (秒
 
 security:
   validate:

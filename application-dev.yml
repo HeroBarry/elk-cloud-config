@@ -24,8 +24,8 @@ ribbon:
     enable: false
   OkHttp:
     enable: true
-  ReadTimeout: 60000 # 请求处理的超时时间
-  ConnectTimeout: 60000 #请求连接的超时时间
+  ReadTimeout: 600000 # 请求处理的超时时间
+  ConnectTimeout: 600000 #请求连接的超时时间
   
 feign:
   okhttp:
