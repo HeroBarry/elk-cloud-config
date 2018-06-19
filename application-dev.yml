@@ -1,8 +1,3 @@
-#加密配置
-jasypt:
-  encryptor:
-    password: elk123
-
 spring:
   redis:
     remote: true        #是否是cachecloud 获取 192.168.99.100
