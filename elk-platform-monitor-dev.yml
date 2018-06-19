@@ -13,3 +13,8 @@ turbine:
   app-config: elk-platform-zuul #收集监控信息的服务名
   combine-host-port: true
   cluster-name-expression: new String('default') #集群名称
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients: elk-app-coach-dev,elk-app-student-dev,elk-platform-auth-dev,elk-platform-zuul-dev,elk-service-activiti-dev,elk-service-bespeak-dev,elk-service-upms
