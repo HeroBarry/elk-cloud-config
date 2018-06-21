@@ -147,4 +147,4 @@ urls:
     - /app/**
     - /oss/upload
     - /test/**
-    - /visit/intention/create/*
+    - /visit/intention/create
