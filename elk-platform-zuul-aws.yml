@@ -143,4 +143,5 @@ urls:
     - /excle/**
     - /app/**
     - /oss/upload
-    - /visit/intention/create/*
+    - /visit/intention/create
+    - /upms/upmsupdateinf/list*
