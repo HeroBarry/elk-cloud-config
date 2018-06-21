@@ -148,3 +148,4 @@ urls:
     - /oss/upload
     - /test/**
     - /visit/intention/create
+    - /upms/upmsupdateinf/list*
