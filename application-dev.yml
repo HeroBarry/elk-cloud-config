@@ -1,11 +1,11 @@
 spring:
   redis:
     remote: true        #是否是cachecloud 获取 192.168.99.100
-    host: 192.168.1.185
+    host: 192.168.1.106
     port: 6379
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
   rabbitmq:
-    host: 192.168.1.185
+    host: 192.168.1.106
     port: 5672
     username: elk
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
