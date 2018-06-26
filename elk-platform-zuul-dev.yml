@@ -149,3 +149,4 @@ urls:
     - /test/**
     - /visit/intention/create
     - /upms/upmsupdateinf/list*
+    - /stu/student/exportStudent
