@@ -150,3 +150,5 @@ urls:
     - /visit/intention/create
     - /upms/upmsupdateinf/list*
     - /stu/student/exportStudent
+    - /upms/user/saveBg/*
+    - /upms/user/saveApps
