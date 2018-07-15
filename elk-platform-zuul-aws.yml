@@ -148,4 +148,3 @@ urls:
     - /stu/student/exportStudent
     - /upms/user/saveBg
     - /upms/user/saveApps
-    - /activiti/agency/queryAgency
