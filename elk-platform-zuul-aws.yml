@@ -145,6 +145,7 @@ urls:
     - /oss/upload
     - /visit/intention/create
     - /upms/upmsupdateinf/list*
+    - /upms/user/editInfo
     - /stu/student/exportStudent
     - /upms/user/saveBg
     - /upms/user/saveApps
