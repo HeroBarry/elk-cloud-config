@@ -142,6 +142,7 @@ urls:
     - /activiti/404.html
     - /excle/**
     - /app/**
+    - /visualization/**
     - /oss/upload
     - /visit/intention/create
     - /upms/upmsupdateinf/list*
