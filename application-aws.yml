@@ -1,6 +1,4 @@
 spring:
-  jackson:
-    time-zone: GMT+8
   redis:
     remote: true        #是否是cachecloud 获取 192.168.99.100
     host: mq.eluchn.com
