@@ -1,5 +1,5 @@
 server:
-  port: 8119
+  port: 8112
 
 # Redis cache 过期时间设置
 redis:
@@ -13,7 +13,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: ENC(i3W5sWIP+RQt4tt/dk/Qiw==)
     password: ENC(CxerGjQOXqJ3c+egeJrtIQ==)
-    url: jdbc:mysql://mysql.eluchn.com/elk_cloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:mysql://mysql.eluchn.com/elk_dev?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
 #    hikari:
 #      #jdbc-url:
 #      minimum-idle: 5
@@ -24,7 +24,6 @@ spring:
 #      connection-timeout: 30000
 #      connection-test-query: SELECT 1
 #      max-lifetime: 1800000
-
 
 #分页插件
 pagehelper:
@@ -38,6 +37,9 @@ pagehelper:
 mybatis:
   mapperLocations: classpath:/mapper/**/*.xml
 
-
-
-
+swagger:
+  basepackage: com.elk.cloud.student.controller #扫描api包路径
+  title: Elk APP STUDENT API #API 标题
+  description: 小程序学员端 #API描述
+  version: 1.0  #版本号
+  name: 1.0  #版本号
