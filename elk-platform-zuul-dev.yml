@@ -152,3 +152,4 @@ urls:
     - /stu/student/exportStudent
     - /upms/user/saveBg/*
     - /upms/user/saveApps
+    - /finance/service/category/saveConfig
